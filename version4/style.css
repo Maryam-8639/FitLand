@@ -1,0 +1,832 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'vazirmatn', sans-serif;
+    font-size: 13px;
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+/* اضافه کردن فونت وزیر متن */
+@font-face {
+    font-family: 'vazirmatn';
+    src: url('./fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2'),
+    url('./fonts/ttf/Vazirmatn-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'vazirmatn';
+    src: url('./fonts/ttf/Vazirmatn-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+/* هدر سایت */
+.site-header {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 12px 0;
+}
+.site-header--top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.site-header--logo img:first-child {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+}
+.site-header--promo {
+    display: none;
+}
+
+/* سرچ باکس */
+.site-header--search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 541px;
+}
+.search-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 19px;
+    border:1px solid rgba(203, 203, 203, 1);
+    gap: 12px;
+    padding: 8px 16px;
+
+}
+.search-box--icon-right {
+    display: none;
+}
+.search-box--input {
+    outline: none;
+    flex: 1;
+    border: none;
+    font-family: 'vazirmatn';
+}
+.site-header--cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+/* منوی کاربری*/
+.user-menu {
+    display: flex;
+    align-items: center;
+    padding:10px;
+    border: 2px solid #fff;
+    border-radius: 14px;
+    box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.05);
+}
+.user-menu--toggle {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 6px;
+    cursor: pointer;
+}
+.user-menu--toggle img:first-child{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+.user-menu--arrow{
+    width: 12px;
+    height: 12px;
+    object-fit: cover;
+}
+/* منوی همبرگری*/
+.hamburger-toggle {
+    display: none;
+}
+.hamburger-btn {
+    transition: all 0.3s ease;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 101;
+}
+
+/* سبد خرید*/
+.cart {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgba(250, 84, 28, 1);
+}
+.cart--icon-hover {
+    display: none;
+}
+.cart--icon-default {
+    width: 20px;
+    height: 20px;
+}
+.cart--count {
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13px;
+    height: 13px;
+    top:-5px;
+    left:-5px;
+    border-radius: 50%;
+    background-color: rgba(3, 35, 64, 1);
+    font-feature-settings: "ss01";
+    color: #FFF;
+}
+
+/* منوی ناوبری*/
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 16px 40px;
+    border:1px solid rgba(249, 249, 249, 1);
+    border-radius: 16px;
+    background-color:rgba(249, 249, 249, 1) ;
+}
+.main-nav--list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 40px;
+}
+.main-nav--item a {
+    text-decoration: none;
+    color: #000;
+}
+/* لینک فروشگاه */
+.main-nav--featured {
+    display: flex;
+    max-width: 480px;
+    gap: 32px;
+}
+.main-nav--featured img {
+    width: 15px;
+    height: 15px;
+}
+.featured-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 6px;
+    color: #000;
+}
+
+/* Faq */
+.faq{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* faq container */
+.faq__container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+/* Breadcrumb */
+.faq__breadcrumb{
+    display: flex;
+}
+.breadcrumb__list{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+.breadcrumb__item-active{
+    background-color:rgba(235, 245, 255, 1);
+    padding: 8px;
+    border-radius: 13px;
+    font-size: 12px;
+}
+.breadcrumb__item{
+    font-size: 12px;
+}
+.breadcrumb__separator{
+    display: none;
+}
+
+/* search box */
+.faq__search{
+    position: relative;
+    max-width: 420px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(237, 237, 237, 1);
+    border-radius: 8px;
+    padding: 5px 12px;
+}
+.search__input{
+    font-size: 11px;
+    font-family: 'vazirmatn';
+    border: none;
+}
+.search__placeholder{
+    position: absolute;
+    right: 45px;
+    font-size: 11px;
+    color: rgba(134, 134, 134, 1);
+}
+
+/* layout */
+.faq__layout{
+    display: grid;
+    grid-template-columns: 280px auto;
+}
+
+/* list grid & flex */
+.category-list__grid{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 6px;
+}
+.category-list__item{
+    display: flex;
+    gap: 13px;
+    background:rgba(249, 249, 249, 1);
+    border-radius: 7px;
+    padding: 14px;
+    max-width: 244px;
+    justify-content: right;
+}
+.category-list__summary{
+    list-style: none;
+    display: flex;
+}
+.category-list__content{
+    display: flex;
+    gap: 10px;
+}
+.category-list__item:hover{
+    background:rgba(254, 238, 232, 1);
+}
+.category-list__title{
+    font-size: 11px;
+}
+.category-list__arrow{
+    display: none;
+}
+.category-list__item--active{
+    background:rgba(254, 238, 232, 1);
+}
+.faq-content__question{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+/* faq content */
+.faq__content{
+    display: grid;
+    gap:35px;
+}
+.faq-content__question-text{
+    font-size: 13px;
+}
+.faq-content__header{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.faq-content__icon{
+    width: 22px;
+    height: 22px;
+    object-fit: cover;
+}
+.faq-content__title{
+    font-size: 23px;
+    font-weight: 500;
+}
+.list-details span{
+    font-size: 10px;
+    color: dimgrey;
+}
+/* فوتر*/
+.site-footer{
+   width: 100%;
+   max-width:1200px; 
+   margin: 0 auto;
+   background-color:rgba(2, 21, 38, 1) ;
+   color: #FFF;
+   margin-top: 30px;
+}
+.site-footer--container{
+    display: grid;
+    grid-template-columns: 4fr 1.5fr;
+    width: 92%;
+    margin: 0 auto;
+    gap: 90px;
+    padding: 18px 0;
+}
+/* ستون های لینک */
+.site-footer--top{
+    display: flex;
+    gap: 40px;
+}
+.site-footer--column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 190px;
+    gap: 16px;
+}
+.site-footer--title{
+    font-size: 11px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    list-style: none;
+    cursor: default;
+
+}
+.site-footer--list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-right: 15px;
+}
+.site-footer--item{
+    font-size: 10px;
+    font-weight: 400;
+}
+.site-footer--link{
+    text-decoration: none;
+    color:rgba(203, 203, 203, 1);
+}
+.site-footer--highlight span{
+    color: rgba(250, 84, 28, 1);
+}
+
+/* شبکه های اجتماعی */
+.site-footer--side{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 213px;
+}
+.site-footer--social{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.site-footer--text{
+    font-size: 10px;
+    font-weight: 400;
+}
+.site-footer--icons{
+    display: flex;
+    gap: 19px;
+}
+.site-footer--icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+}
+.site-footer--icon img{
+    width: 21px;
+    height: 16px;
+}
+
+/* فرم خبرنامه */
+.site-footer--newsletter{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.site-footer--form{
+    display: flex;
+    border-radius: 6px;
+    border: 1px solid rgba(134, 134, 134, 1);
+    align-items: center;
+}
+.site-footer--sms{
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+.site-footer--input{
+    max-width: 280px;
+    background: transparent;
+    border: none;
+    color:rgba(134, 134, 134, 1);
+    font-family: 'vazirmatn';
+    outline: none;
+    font-size: 10px;
+    padding:4px 11px;
+}
+.site-footer--button{
+    border: none;
+    padding: 0 12px;
+    border-radius: 4px;
+    background-color: rgba(250, 84, 28, 1);
+    color: #FFF;
+    font-family: 'vazirmatn';
+    cursor: pointer;
+    font-size: 10px;
+}
+
+/* متن درباره فروشگاه*/
+.site-footer--middle{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 550px;
+    gap: 13px;
+}
+.site-footer--about{
+    font-size: 11px;
+    font-weight: 400;
+}
+.site-footer--about-text{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 18px;
+}
+/* نماد های  اعتماد*/
+.site-footer--symbols{
+    display: flex;
+    flex-direction: column;
+    max-width: 213px;
+    gap: 20px;
+    align-items: center;
+}
+.site-footer--images{
+    display: flex;
+    gap: 20px;
+}
+.site-footer--image{
+    width: 57px;
+    height: 67px;
+    object-fit: cover;
+}
+.site-footer--guarantee{
+    font-size: 10px;
+    font-weight: 400;
+}
+/* خط جدا کننده*/
+.site-footer--divider{
+    display: block;
+    max-width: 1200px;
+    height: 1px;
+    background-color: rgba(203, 203, 203, 1);
+}
+/* کپی رایت */
+.site-footer--bottom{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 92%;
+    margin: 0 auto;
+    padding: 3px 0px;
+}
+.site-footer--copyright{
+    font-size: 8px;
+    font-weight: 400;
+}
+.site-footer--designer{
+    font-size: 8px;
+    font-weight: 400;
+}
+.product-card--octions-image1{
+    display: none;
+}
+.product-description2{
+    display: none;
+}
+.hide-desktop--footer--middle{
+    display: none;
+}
+.site-footer--top-hide-desktop{
+    display: none;
+}
+@media (max-width:600px){
+    /* هدر سایت*/
+.site-header {
+    max-width: 305px;
+    padding: 5px 8px;
+    gap: 16px;
+}
+.site-header--top{
+   display: grid;
+   grid-template-columns: auto 1fr auto;
+   grid-template-rows: auto auto;
+   align-items: center;
+   gap: 10px;
+}
+/* لوگو سایت */
+.site-header--logo img:first-child {
+    display: none;
+}
+.site-header--logo{
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+}
+.site-header--promo {
+    display: flex;
+}
+.site-header--cart{
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    padding: 0;
+    gap: 8px;
+}
+/* سرچ باکس*/
+.site-header--search{
+    grid-column: 1/-1;
+    grid-row: 2;
+    max-width: 300px;
+    width: 100%;
+    margin-top: 10px;
+}
+.search-box{
+    padding: 5px 13px;
+    border-radius: 12px;
+    background: rgba(249, 249, 249, 1);
+    border: none;
+}
+.search-box--icon-left{
+    display: none;
+}
+.search-box--icon-right{
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.search-box--input{
+    font-family: 'vazirmatn';
+    background: transparent;
+    font-size:10px;
+}
+/* منوی ناوبری */
+.main-nav{
+    display:flex;
+    position: fixed;
+    top:55px;
+    right:-100%;
+    width:80%;
+    height: 20vh;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+    padding: 24px;
+    background: #FFF;
+    transition:right 0.9s ease;
+    z-index: 100;
+    background-color: rgba(249, 249, 249, 1);
+    font-size: 12px;
+}
+
+/* همبرگر منو */
+.hamburger-toggle:checked ~ .main-nav{
+    right: 0;
+}
+.hamburger-btn{
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    z-index: 101;
+    width: 18px;
+    height: 18px;
+}
+.main-nav--list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+/* لینک فروشگاه */
+.main-nav--featured{
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* منوی کاربری */
+.site-header--cart{
+    gap: 4px;
+}
+.user-menu {
+    padding:0;
+    border: none;
+    box-shadow: none;
+}
+.user-menu--toggle img{
+    width: 20px;
+    height: 20px;
+}
+.user-menu--arrow{
+    display: none;
+}
+.cart--count{
+    display: none;
+}
+
+/* سبد خرید */
+.cart{
+    border-radius: 0;
+    background-color: transparent;
+    width: 20px;
+    height: 20px; 
+}
+.cart--icon-hover {
+    display:block;
+    width: 20px;
+    height: 20px;
+}
+.cart--icon-default{
+    display: none;
+}
+
+/* faq*/
+.faq{
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* breadcrumb */
+.breadcrumb__list{
+    width: 300px;
+    justify-content: space-between;
+}
+.breadcrumb__item{
+    display: none;
+}
+.breadcrumb__separator{
+    display: block;
+}
+.breadcrumb__item-active{
+    background: none;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0;
+}
+/* main-nav--featured */
+.main-nav--featured{
+    display: none;
+}
+
+/* search box */
+.faq__search{
+    display: none;
+}
+/* arrow */
+.category-list__arrow{
+    position: absolute;
+    display: flex;
+    left: 10px;
+}
+/* list flex */
+.category-list__grid{
+    gap: 8px;
+}
+.category-list__item{
+    position: relative;
+    gap: 0px;
+    max-width: 270px;
+    justify-content: space-between;
+}
+.category-list__summary{
+    display: flex;
+    justify-content: space-between;
+}
+.faq__content{
+    display: none;
+}
+/* main conent */
+.faq__container{
+    gap: 22px;
+}
+.faq__layout{
+    grid-template-columns: auto;
+}
+/* فوتر */
+.site-footer{
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+}
+.site-footer--container{
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px 0;
+}
+.site-footer--side{
+    order: 1;
+    max-width: 100%;
+}
+.site-footer--social{
+    align-items: center;
+}
+.site-footer--top-hide-desktop{
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+}
+.hide-desktop--icon{
+    display: flex;
+    object-fit: cover;
+    width: 16px;
+    height: 16px;
+}
+.site-footer--title{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.site-footer--list{
+    list-style: none;
+    margin: 0;
+}
+.hide-desktop--footer--middle{
+    display: flex;
+    flex-direction: column;
+    order: 3;
+    max-width: 100%;
+    text-align: right;
+}
+.site-footer--symbols{
+    order: 4;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+}
+.site-footer--bottom{
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+}
+/* فرم فوتر */
+.site-footer--icons{
+    justify-content: center;
+}
+/* ستون ها */
+.site-footer--column{
+    max-width: 100%;
+    border-bottom: 1px solid #163B5D;
+    gap: 15px;
+}
+.site-footer--button{
+    margin-right: 62px;
+}
+.site-footer--column:nth-child(1){
+    order: 2;
+}
+.site-footer--column:nth-child(2){
+    order: 4;
+}
+.site-footer--column:nth-child(3){
+    order: 1;
+}
+.site-footer--column:nth-child(4){
+    order: 3;
+}
+.site-footer--about-text summary{
+    list-style: none;
+    border-bottom:1px solid rgba(173, 173, 173, 1);
+    max-width: 94px;
+    color: rgba(173, 173, 173, 1);
+    margin: 4px;
+    cursor: pointer;
+}
+.site-footer--top{
+    display: none;
+}
+.site-footer--middle{
+    display: none;
+}
+.site-footer--newsletter-title{
+    font-size: 11px;
+}
+}

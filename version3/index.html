@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>فروشگاه فیت لند</title>
+</head>
+<body>
+  <header class="site-header">
+
+    <!-- نوار بالای هدر -->
+    <div class="site-header--top">
+
+      <!--لوگو و بنر تبلیغاتی-->
+      <div class="site-header--logo">
+        <img src="./images/وضعیت های هدر3 (2).svg" alt="لوگوی سایت">
+        <img src="./images/وضعیت های هدر3.svg" alt="بنر سایت" class="site-header--promo">
+      </div>
+
+      <!--دکمه باز و بسته شدن منوی موبایل-->
+      <label for="hamburger-toggle" class="hamburger-btn">
+        <img src="./images/Vector (3).svg" alt="منو">
+      </label>
+
+      <!-- باکس جستجو -->
+      <div class="site-header--search">
+        <label class="search-box">
+
+          <!--آیکون جستجو-->
+          <img src="./images/search-normal (2).svg" alt="" class="search-box--icon-left">
+          <img src="./images/search-normal.svg" alt="" class="search-box--icon-right">
+          <input type="search" name="search" id="search" class="search-box--input" aria-label="جستجو" placeholder="جستجو">
+        </label>
+      </div>
+
+      <!--بخش حساب کاربری و سبد خرید -->
+      <div class="site-header--cart">
+
+        <!-- منوی کاربری-->
+        <details class="user-menu">
+          <summary class="user-menu--toggle">
+            <img src="./images/user.svg" alt="کاربر">
+            <img src="./images/arrow-down.svg" alt="" class="user-menu--arrow">
+          </summary>
+        </details>
+
+        <!-- لینک سبد خرید -->
+        <div class="cart">
+          <a href="#" class="cart-link">
+            <img src="./images/bag-2.svg" alt="" class="cart--icon-default">
+            <img src="./images/bag-2 (2).svg" alt="" class="cart--icon-hover">
+            <span class="cart--count">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- checkboxمنوی موبایل -->
+    <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
+
+    <!-- منوی اصلی ناوبری -->
+    <nav class="main-nav">
+
+      <!-- دسته بندی محصولات -->
+      <ul class="main-nav--list">
+        <li class="main-nav--item"><a href="#">مردانه</a></li>
+        <li class="main-nav--item"><a href="#">زنانه</a></li>
+        <li class="main-nav--item"><a href="#">بچگانه</a></li>
+        <li class="main-nav--item"><a href="#">لوازم ورزشی</a></li>
+        <li class="main-nav--item"><a href="#">شیکر و جاگ</a></li> 
+      </ul>
+
+      <!-- لینک ویژه فروشگاه -->
+      <div class="main-nav--featured">
+        <a href="#" class="featured-link">
+          <img src="./images/star.svg" alt="">
+          <span>جدیدترین محصولات</span>
+        </a>
+        <a href="#" class="featured-link">
+          <img src="./images/flash.svg" alt="">
+          <span>تخفیفات ویژه</span>
+        </a>
+        <a href="#" class="featured-link">
+          <img src="./images/award.svg" alt="">
+          <span>پرفروش ترین ها</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main class="page">
+    <!-- کارت محصولات -->
+    <article class="product-card">
+      <!--گالری محصولات  -->
+      <div class="product-card--gallery">
+        <img src="./images/Frame 1430103650.svg" alt="کفش بسکتبال" class="product-cart--main-images">
+        <img src="./images/Frame 1430104087.svg" alt="کفش بسکتبال" class="product-cart--main-image">
+        <div class="product-card--thumbnails">
+          <img src="./images/image 1.svg" alt="نمای کناری کفش" class="product-card--thumbnail1">
+          <img src="./images/image 2.svg" alt=" کف کفش" class="product-card--thumbnail2">
+          <img src="./images/image 3.svg" alt=" نمای  کلی کفش" class="product-card--thumbnail3">
+          <img src="./images/image 4.svg" alt="نمای پشت کفش" class="product-card--thumbnail4">
+          <img src="./images/image 3.svg" alt="نمای کلی کفش" class="product-card--thumbnail5">
+          <img src="./images/tag card.svg" alt="تصاویر بیشتر" class="product-card--thumbnail6">
+          <img src="./images/Frame 1430104088.svg" alt="تصاویر بیشتر" class="product-card--thumbnail7">
+        </div>
+      </div>
+      <div class="product-card--info">
+        <div class="product-card--header">
+          <div class="product-card--brand-box">
+            <p class="product-card--brand">KD17</p>
+            <p class="product-card--category" >کفش بسکتبال</p>
+          </div>
+          <p class="product-card--rating"><img src="./images/Star 1.svg" alt="">3.2</p>
+        </div>
+        <span class="product-card--price">۶۰۰,۰۰۰ تومان</span>
+        <img src="./images/botton.svg" alt="" class="product-card--photo">
+        <details class="product-card--sizes" open>
+          <summary class="product-card--sizes-title">سایز
+            <img src="./images/arrow-down (2).svg" alt="فلش">
+          </summary>
+          <div class="product-card--sizes-grid">
+            <span class="product-card--size"></span>
+            <span class="product-card--size"></span>
+            <span class="product-card--size"></span>
+            <span class="product-card--size"></span>
+            <span class="product-card--size"></span>
+          </div>
+        </details>
+        <!-- رنگ ها -->
+        <div class="product-card--colors">
+          <p class="product-card--section-title">رنگ</p>
+          <nav class="product-card--color-list">
+            <div class="product-card--color product-card--color--active">
+              <span class="product-card--color-circle product-card--color-circle--khaki"></span>خاکی
+            </div>
+            <div class="product-card--color">
+              <span class="product-card--color-circle product-card--color-circle--yellow"></span>زرد
+            </div>
+            <div class="product-card--color">
+              <span class="product-card--color-circle product-card--color-circle--purple"></span>بنفش
+            </div>
+          </nav>
+          <nav class="product-card--color-list2">
+            <div class="product-card--color">
+              <span class="product-card--color-circle product-card--color-circle--zogali"></span>ذغالی
+            </div>
+            <div class="product-card--color">
+              <span class="product-card--color-circle product-card--color-circle--tosi"></span>طوسی
+            </div>
+            <div class="product-card--color">
+              <span class="product-card--color-circle product-card--color-circle--black"></span>مشکی
+            </div>
+          </nav>
+        </div>
+        <!-- </div> -->
+         <!-- کارت سبد خرید -->
+        <div class="product-card--octions">
+          <img src="./images/botton (1).svg" alt="" class="product-card--octions-image1">
+          <img src="./images/Frame 1430104039.svg" alt="" class="product-card--octions-image2">
+          <button class="product-card--add-to-cart">
+            <img src="./images/shopping-cart.svg" alt=" سبد خرید" class="product-card--octions-image5">
+            افزودن به سبد خرید
+          </button>
+          <img src="./images/botton (2).svg" alt="" class="product-card--octions-image6">
+          <img src="./images/Frame 1430103718.svg" alt="" class="product-card--octions-image3">
+          <img src="./images/Frame 1430103718 (1).svg" alt="" class="product-card--octions-image4">
+        </div>
+      </div> 
+    </article>
+
+    <!-- ویژگی ها -->
+    <section class="product-tabs">
+      <nav class="product-tabd--menu">
+        <ul class="product-tabs--list">
+          <li class="product-tabs--item--active">ویژگی های محصول</li>
+          <li class="product-tabs--item">توضیحات</li>
+          <li class="product-tabs--item">نظرات</li>
+        </ul>
+      </nav>
+      
+      <!-- جنس -->
+      <div class="product-specs">
+        <ul class="product-specs--row">
+          <li class="product-specs--label">جنس</li>
+          <li class="product-specs--value">چرم مصنوعی</li>
+        </ul>
+        <ul class="product-specs--row">
+          <li class="product-specs--label">جنس زیره</li>
+          <li class="product-specs--value">ترموپلاستیک پلی اورتان (TPU)</li>
+        </ul>
+        <div class="product-specs--row product-specs--row--stack">
+          <p class="product-specs--label">ویژگی‌های زیره</p>
+          <ul class="product-specs--list">
+            <li>انعطاف پذیر</li>
+            <li>قابلیت ارتجاعی</li>
+            <li>کاهش فشار وارده</li>
+            <li>مقاوم در برابر سایش</li>
+          </ul>
+        </div>
+        <ul class="product-specs--row">
+          <li class="product-specs--label">ویژگی کفی کفش</li>
+          <li class="product-specs--value">طبی قابل تعویض</li>
+        </ul>
+      </div>
+
+      <!-- متن درباره محصولات -->
+      <div class="product-description">
+        <p class="product-description--text">
+          یکی از دلایلی که باعث شده نایک به انتخاب اول تمامی ورزشکار های دنیا تبدیل شود. تکنولوژی ها و ویژگی های پیشرفته ای است که نایکی در تولید کفش های خود از آن بهره میبرد. کفش های نایک علاوه بر داشتن تکنولوژی هایی مانند Nike Air, Zoomx, Nike React و … دارای برخی ویژگی ها مثل وزن سبک، انعطاف پذیری بالا، تنفس پذیری و قابلیت تهویه هوا، بازگشت انرژی و راحتی فوق العاده است که در ادامه به آنها میپردازیم.
+         اما توجه داشته باشید که تنها کفش های نایک اصل دارای چنین مشخصاتی هستند و کفش های کپی، های کپی، کوالی مستر و … فاقد هر گونه تکنولوژی و فناوری هستند و تنها ظاهر نمونه اورجینال کفش را تولید میکنند. اگر قصد خرید کفش نایک اصل را دارید یا میخواهید از اصل بودن کفش نایک خود مطمئن شوید توصیه میکنیم مقاله تشخیص کفش نایک اصل را مطالعه کنید.
+        </p>
+      </div>
+      <!-- hide desktop -->
+      <div class="product-description2">
+        <p class="product-description--text">یکی از دلایلی که باعث شده نایک به انتخاب اول تمامی ورزشکار های دنیا تبدیل شود. تکنولوژی ها و ویژگی های پیشرفته ای است که نایکی در تولید کفش های خود از آن بهره میبرد. کفش های نایک علاوه بر داشتن تکنولوژی هایی مانند Nike Air, Zoomx, Nike React و … 
+        </p>
+        <details>
+          <summary class="product-description--button">بارگزاری بیشتر
+            <img src="./images/arrow-down (3).svg" alt="">
+          </summary>
+          <p class="product-description--text">
+          دارای برخی ویژگی ها مثل وزن سبک، انعطاف پذیری بالا، تنفس پذیری و قابلیت تهویه هوا، بازگشت انرژی و راحتی فوق العاده است که در ادامه به آنها میپردازیم.
+          اما توجه داشته باشید که تنها کفش های نایک اصل دارای چنین مشخصاتی هستند و کفش های کپی، های کپی، کوالی مستر و … فاقد هر گونه تکنولوژی و فناوری هستند و تنها ظاهر نمونه اورجینال کفش را تولید میکنند. اگر قصد خرید کفش نایک اصل را دارید یا میخواهید از اصل بودن کفش نایک خود مطمئن شوید توصیه میکنیم مقاله تشخیص کفش نایک اصل را مطالعه کنید.
+          </p>
+        </details>
+      </div>
+      <div class="product-reviews">
+        <div class="product-reviews--list">
+          <div class="review-card">
+            <div class="review-card--header">
+              <img src="./images/Frame 1430103822.svg" alt="" class="review-card--image">
+              <p class="review-card--p">رسول</p>
+              <img src="./images/stars.svg" alt="" class="review-card--stars">
+            </div>
+            <p class="review-card--text">بسیار ممنونم از اینکه این کفش خوب رو برامون گذاشتید. خییلییی خفنه</p>
+          </div>
+          <div class="review-card">
+            <div class="review-card--header">
+              <img src="./images/Frame 1430103822 (2).svg" alt="" class="review-card--image">
+              <p class="review-card--p">مهسا</p>
+              <img src="./images/stars (2).svg" alt="" class="review-card--stars">
+            </div>
+            <p class="review-card--text">خیلی راضی نبودم. جنسش خوب نبود.</p>
+          </div>
+          <div class="review-card">
+            <div class="review-card--header">
+              <img src="./images/Frame 1430103822 (1).svg" alt="" class="review-card--image">
+              <p class="review-card--p">زهرا</p>
+              <img src="./images/stars (1).svg" alt="" class="review-card--stars">
+            </div>
+            <p class="review-card--text">سلام دقیقااندازه ی سایز پامون سفارش بدیم یایه شماره کوچیکتر؟چون شنیدم این کفش‌ها به مرورجاباز میکنن!</p>
+          </div>
+        </div>
+        <!-- فرم محصولات -->
+        <div class="review-form">
+          <div class="review-form--header">
+            <p class="review-form--title">نظرت رو برامون بنویس</p>
+            <p class="review-form--subtitle">ایمیل شما نشان داده نمی‌شود.</p>
+          </div>
+          <fieldset class="review-form--field">
+            <legend>نام</legend>
+            <textarea></textarea>
+          </fieldset>
+          <fieldset class="review-form--field">
+            <legend>ایمیل</legend>
+            <textarea></textarea>
+          </fieldset>
+          <fieldset class="review-form--field review-form--field--large" >
+            <legend>نظر شما</legend>
+            <textarea></textarea>
+          </fieldset>
+          <img src="./images/rate.svg" alt="" class="rate">
+        </div>
+      </div>
+    </section>
+    <section class="product-showcase">
+      <h3 class="product-showcase__heading">محصولات مرتبط</h3>
+      <div class="product-showcase__grid">
+        <!-- card1 -->
+        <article class="product-showcase__card">
+          <div class="product-showcase__image">
+            <img src="./images/Rectangle 1166.svg" alt="تیشرت زنانه کد 1827">
+          </div>
+          <div class="product-showcase__info">
+            <div class="product-showcase__header">
+              <p class="product-showcase__title">کفش نایک مدل S-2000</p>
+              <div class="product-showcase__stars">
+                <img src="./images/stars (1).svg" alt="رتبه 3 از 5 ستاره" class="star">
+              </div>
+            </div>
+            <span class="product-showcase__price"> ۲۰۰۰۰۰ تومان</span>
+            <div class="product-showcase__size">از سایز ۳۶ تا ۴۳</div>
+            <div class="product-showcase__colors">
+              <span class="product-showcase__color product-showcase__color--black"></span>
+              <span class="product-showcase__color product-showcase__color--gray"></span>
+              <span class="product-showcase__color product-showcase__color--white"></span>
+            </div>
+          </div>
+        </article>
+        <!-- card2 -->
+        <article class="product-showcase__card">
+          <div class="product-showcase__image">
+            <img src="./images/Rectangle 1166 (3).svg" alt="تیشرت زنانه کد 1827">
+          </div>
+          <div class="product-showcase__info">
+            <div class="product-showcase__header">
+              <p class="product-showcase__title">کفش نایک مدل S-2000</p>
+              <div class="product-showcase__stars">
+                <img src="./images/stars (3).svg" alt="رتبه 2 از 5 ستاره" class="star">
+              </div>
+            </div>
+            <span class="product-showcase__price"> ۲۰۰۰۰۰ تومان</span>
+            <div class="product-showcase__size">از سایز ۳۶ تا ۴۳</div>
+            <div class="product-showcase__colors">
+              <span class="product-showcase__color product-showcase__color--black"></span>
+              <span class="product-showcase__color product-showcase__color--gray"></span>
+              <span class="product-showcase__color product-showcase__color--white"></span>
+            </div>
+          </div>
+        </article>
+        <!-- card3 -->
+        <article class="product-showcase__card">
+          <div class="product-showcase__image">
+            <img src="./images/Frame 1430103166.svg" alt="تیشرت زنانه کد 1827">
+          </div>
+          <div class="product-showcase__info">
+            <div class="product-showcase__header">
+              <p class="product-showcase__title">کفش نایک مدل S-2000</p>
+              <div class="product-showcase__stars">
+                <img src="./images/stars.svg" alt="رتبه 4 از 5 ستاره" class="star">
+              </div>
+            </div>
+            <span class="product-showcase__price"> ۲۰۰۰۰۰ تومان</span>
+            <div class="product-showcase__size">از سایز ۳۶ تا ۴۳</div>
+            <div class="product-showcase__colors">
+              <span class="product-showcase__color product-showcase__color--black"></span>
+              <span class="product-showcase__color product-showcase__color--gray"></span>
+              <span class="product-showcase__color product-showcase__color--white"></span>
+            </div>
+          </div>
+        </article>
+        <!-- card4 -->
+        <article class="product-showcase__card">
+          <div class="product-showcase__image">
+            <img src="./images/Rectangle 1166 (4).svg" alt="تیشرت زنانه کد 1827">
+          </div>
+          <div class="product-showcase__info">
+            <div class="product-showcase__header">
+              <p class="product-showcase__title">کفش نایک مدل S-2000</p>
+              <div class="product-showcase__stars">
+                <img src="./images/stars (1).svg" alt="رتبه 3 از 5 ستاره" class="star">
+              </div>
+            </div>
+            <span class="product-showcase__price"> ۲۰۰۰۰۰ تومان</span>
+            <div class="product-showcase__size">از سایز ۳۶ تا ۴۳</div>
+            <div class="product-showcase__colors">
+              <span class="product-showcase__color product-showcase__color--black"></span>
+              <span class="product-showcase__color product-showcase__color--gray"></span>
+              <span class="product-showcase__color product-showcase__color--white"></span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <section class="store-features">
+    <div class="store-features__list">
+      <div class="store-features__item">
+        <img src="./images/Frame 1430103423.svg" alt="ایکون  ارسال" class="store-features__icon">
+        <p class="store-features__title">ارسال سریع</p>
+      </div>
+      <div class="store-features__item">
+        <img src="./images/Frame 1430103423 (1).svg" alt="ایکون پرداخت" class="store-features__icon">
+        <p class="store-features__title">پرداخت قسطی</p>
+      </div>
+      <div class="store-features__item">
+        <img src="./images/Frame 1430103423 (2).svg" alt="ایکون پرداخت" class="store-features__icon">
+        <p class="store-features__title">پرداخت درب منزل</p>
+      </div>
+      <div class="store-features__item store-features__item--text">
+        <p >با بیش از ده سال سابقه فروش لوازم ورزشی و لباس های ورزشی</p>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="site-footer--container">
+
+      <!-- ستون های لینک -->
+      <div class="site-footer--top">
+        <div class="site-footer--column" >
+          <h6 class="site-footer--title">محبوب‌ترین‌ها</h6>
+          <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">لباس مردانه</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">کفش فوتبال</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">دوچرخه</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">لباس زنانه</a></li>
+          </ul>
+        </div>
+        <div class="site-footer--column">
+          <h6 class="site-footer--title">خدمات مشتریان</h6>
+          <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">سوالات متداول</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">حریم خصوصی</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">گزارش ایراد در سایت</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">شرایط بازگرداندن محصول</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer--column">
+          <h6 class="site-footer--title">راهنمای خرید</h6>
+            <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">راهنمای ثبت سفارش</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">شیوه های پرداخت</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">نحوه ارسال سفارش ها</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">نحوه پیگیری محصول</a></li>
+          </ul>
+        </div>
+        <div class="site-footer--column">
+          <h6 class="site-footer--title">اطلاعات تماس</h6>
+          <ul class="site-footer--list">
+            <li class="site-footer--item">نشانی تهران - تجریش - خیابان سالور</li>
+            <li class="site-footer--item site-footer--highlight">شماره تماس<span>3456789-021</span></li>
+            <li class="site-footer--item site-footer--highlight">پست الکترونیک<span>info@fitland.com</span></li>
+           <li class="site-footer--item">ساعت کاری شنبه تا چهارشنبه 9 تا 17</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- =====  بخش  هاید شده در دسکتاپ ===== -->
+      <div class="site-footer--top-hide-desktop">
+        <details class="site-footer--column" >
+          <summary class="site-footer--title">محبوب‌ترین‌ها
+            <img src="./images/arrow-circle-down.svg" alt="icon" class="hide-desktop--icon">
+          </summary>
+          <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">لباس مردانه</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">کفش فوتبال</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">دوچرخه</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">لباس زنانه</a></li>
+          </ul>
+        </details>
+        <details class="site-footer--column">
+          <summary class="site-footer--title">خدمات مشتریان
+            <img src="./images/arrow-circle-down.svg" alt="icon" class="hide-desktop--icon">
+          </summary>
+          <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">سوالات متداول</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">حریم خصوصی</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">گزارش ایراد در سایت</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">شرایط بازگرداندن محصول</a></li>
+          </ul>
+        </details>
+
+        <details class="site-footer--column">
+          <summary class="site-footer--title">راهنمای خرید
+            <img src="./images/arrow-circle-down.svg" alt="icon" class="hide-desktop--icon">
+          </summary>
+            <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">راهنمای ثبت سفارش</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">شیوه های پرداخت</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">نحوه ارسال سفارش ها</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">نحوه پیگیری محصول</a></li>
+          </ul>
+        </details>
+        <details class="site-footer--column">
+          <summary class="site-footer--title">اطلاعات تماس
+            <img src="./images/arrow-circle-down.svg" alt="icon" class="hide-desktop--icon">
+          </summary>
+          <ul class="site-footer--list">
+            <li class="site-footer--item">نشانی تهران - تجریش - خیابان سالور</li>
+            <li class="site-footer--item site-footer--highlight">شماره تماس<span>3456789-021</span></li>
+            <li class="site-footer--item site-footer--highlight">پست الکترونیک<span>info@fitland.com</span></li>
+           <li class="site-footer--item">ساعت کاری شنبه تا چهارشنبه 9 تا 17</li>
+          </ul>
+        </details>
+      </div>
+     
+      <!-- شبکه های اجتماعی -->
+      <div class="site-footer--side">
+        <div class="site-footer--social">
+          <p class="site-footer--text">برای دریافت تخفیف های بیشتر ما را دنبال کنید!</p>
+          <div class="site-footer--icons">
+            <a href="#" class="site-footer--icon"><img src="./images/Vector (2).svg" alt="social icon"></a>
+            <a href="#" class="site-footer--icon"><img src="./images/Group (2).svg" alt="social icon"></a>
+            <a href="#" class="site-footer--icon"><img src="./images/Vector (4).svg" alt="social icon"></a>
+            <a href="#" class="site-footer--icon"><img src="./images/Group.svg" alt="social icon"></a>       
+          </div>
+        </div>
+
+        <!-- فرم عضویت خبر نامه -->
+        <div class="site-footer--newsletter">
+          <p class="site-footer--newsletter-title">خبرنامه فیت‌لند</p>
+          <div class="site-footer--form">
+            <img src="./images/sms.svg" alt="پیام" class="site-footer--sms">
+            <input type="email" class="site-footer--input" placeholder="ایمیل خود را وارد کنید...">
+            <button class="site-footer--button">ثبت</button>
+          </div>
+        </div>
+      </div>
+
+     <!-- متن درباره فروشگاه  -->
+      <div class="site-footer--middle">
+        <h6 class="site-footer--title">فروشگاه اینترنتی فیت‌لند</h6>
+        <p class="site-footer--about-text" id="about-text">
+         فروشگاه لوازم ورزشی فیت‌لند در سال 1403 کار خود را به صورت حرفه ای آغاز کرد و با هدف ارائه جدیدترین محصولات ورزشی از قبیل لوازم فوتبال، فوتسال، والیبال، بسکتبال، تنیس و... همچنین پوشاک ورزشی و تجهیزات سفر، از برند های معتبر دنیا در محیطی کاربرپسند، قابل اطمینان و با مجربترین مشاوران و کارشناسان ورزشی فعالیت می کند. فروشگاه فیت‌لند دارای نماد اعتماد از وزارت صنعت معدن و تجارت می باشد و تمامی محصولات خود را با 7 روز ضمانت بازگشت همراه با گارانتی اصالت و سلامت فیزیکی، با سریع ترین روش های ارسال به سراسر ایران در اختیار مشتریان خود قرار می دهد.
+        </p>
+      </div>
+
+      <!-- بخش هاید شده در دسکتاپ -->
+      <div class="hide-desktop--footer--middle">
+        <h4 class="site-footer--title">فروشگاه اینترنتی فیت‌لند</h4>
+        <p class="site-footer--about-text">فروشگاه لوازم ورزشی فیت‌لند در سال 1403 کار خود را به صورت حرفه ای آغاز کرد و با هدف ارائه جدیدترین محصولات ورزشی از  </p>
+        <details class="site-footer--about-text">
+          <summary>مشاهده بیشتر...</summary>
+          <p > قبیل لوازم فوتبال، فوتسال، والیبال، بسکتبال، تنیس و... همچنین پوشاک ورزشی و تجهیزات سفر، از برند های معتبر دنیا در محیطی کاربرپسند، قابل اطمینان و با مجربترین مشاوران و کارشناسان ورزشی فعالیت می کند. فروشگاه فیت‌لند دارای نماد اعتماد از وزارت صنعت معدن و تجارت می باشد و تمامی محصولات خود را با 7 روز ضمانت بازگشت همراه با گارانتی اصالت و سلامت فیزیکی، با سریع ترین روش های ارسال به سراسر ایران در اختیار مشتریان خود قرار می دهد.
+          </p>
+        </details>
+      </div>
+
+      <!--نمادهای اعتماد-->
+      <div class="site-footer--symbols symbol">
+        <div class="site-footer--images">
+          <img src="./images/01.svg" alt="نماد اعتماد" class="site-footer--image">
+          <img src="./images/02.svg" alt="نماد اعتماد" class="site-footer--image">
+          <img src="./images/03 1.svg" alt="نماد اعتماد" class="site-footer--image">
+        </div>
+        <p class="site-footer--guarantee">یک هفته ضمانت بازگشت ✍
+        </p>
+      </div>
+    </div>
+
+    <!--خط جداکننده-->
+    <span class="site-footer--divider"></span>
+
+    <!--کپی رایت-->
+    <div class="site-footer--bottom">
+      <p class="site-footer--copyright"><img src="./images/security-safe.svg" alt="ایکون">
+      تمامی حقوق مادی و معنوی این وب‌سایت برای مجموعه فیت‌لند محفوظ می‌باشد.</p>
+      <p class="site-footer--designer"><img src="./images/buildings.svg" alt="ایکون">
+     طراحی شده توسط گروه 8 دوره طراحی رابط کاربری احسان عزتی</p>
+    </div>
+  </footer> 
+   
+</body>
+</html>

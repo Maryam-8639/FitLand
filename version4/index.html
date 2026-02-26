@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>فیت لند</title>
+</head>
+<body>
+  <header class="site-header">
+
+    <!-- نوار بالای هدر -->
+    <div class="site-header--top">
+
+      <!--لوگو و بنر تبلیغاتی-->
+      <div class="site-header--logo">
+        <img src="./images/وضعیت های هدر3.svg" alt="لوگوی سایت">
+        <img src="./images/وضعیت های هدر3 (2).svg" alt="بنر سایت" class="site-header--promo">
+      </div>
+
+      <!--دکمه باز و بسته شدن منوی موبایل-->
+      <label for="hamburger-toggle" class="hamburger-btn">
+        <img src="./images/Vector (3).svg" alt="منو">
+      </label>
+
+      <!-- باکس جستجو -->
+      <div class="site-header--search">
+        <label class="search-box">
+
+          <!--آیکون جستجو-->
+          <img src="./images/search-normal (2).svg" alt="" class="search-box--icon-left">
+          <img src="./images/search-normal.svg" alt="" class="search-box--icon-right">
+          <input type="search" name="search" id="search" class="search-box--input" aria-label="جستجو" placeholder="جستجو">
+        </label>
+      </div>
+
+      <!--بخش حساب کاربری و سبد خرید -->
+      <div class="site-header--cart">
+
+        <!-- منوی کاربری-->
+        <details class="user-menu">
+          <summary class="user-menu--toggle">
+            <img src="./images/user.svg" alt="کاربر">
+            <img src="./images/arrow-down.svg" alt="" class="user-menu--arrow">
+          </summary>
+        </details>
+
+        <!-- لینک سبد خرید -->
+        <div class="cart">
+          <a href="#" class="cart-link">
+            <img src="./images/bag-2.svg" alt="" class="cart--icon-default">
+            <img src="./images/bag-2 (2).svg" alt="" class="cart--icon-hover">
+            <span class="cart--count">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- checkboxمنوی موبایل -->
+    <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
+
+    <!-- منوی اصلی ناوبری -->
+    <nav class="main-nav">
+
+      <!-- دسته بندی محصولات -->
+      <ul class="main-nav--list">
+        <li class="main-nav--item"><a href="#">مردانه</a></li>
+        <li class="main-nav--item"><a href="#">زنانه</a></li>
+        <li class="main-nav--item"><a href="#">بچگانه</a></li>
+        <li class="main-nav--item"><a href="#">لوازم ورزشی</a></li>
+        <li class="main-nav--item"><a href="#">شیکر و جاگ</a></li> 
+      </ul>
+
+      <!-- لینک ویژه فروشگاه -->
+      <div class="main-nav--featured">
+        <a href="#" class="featured-link">
+          <img src="./images/star.svg" alt="">
+          <span>جدیدترین محصولات</span>
+        </a>
+        <a href="#" class="featured-link">
+          <img src="./images/flash.svg" alt="">
+          <span>تخفیفات ویژه</span>
+        </a>
+        <a href="#" class="featured-link">
+          <img src="./images/award.svg" alt="">
+          <span>پرفروش ترین ها</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+   <!-- بخش میانی  -->
+  <main class="faq">
+    <!-- faq container -->
+    <div class="faq__container">
+      <nav class="faq__breadcrumb">
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item-active">سولات متداول</li>
+          <li><img src="./images/arrow-right.svg" alt="" class="breadcrumb__separator"> </li>
+          <li class="breadcrumb__item">تماس با ما</li>
+          <li class="breadcrumb__item">نشانی ما</li>
+        </ul>
+      </nav>
+      <label class="faq__search search">
+        <img src="./images/search-normal.svg" alt="" class="search__icon">
+        <input type="search" name="search" id="search" class="search__input">
+        <p class="search__placeholder">موضوع خود را جست و جو کنید...</p>
+      </label>
+
+       <!-- layout -->
+      <div class="faq__layout">
+
+       <!-- categories -->
+        <div class="faq__categories">
+          <div class="category-list__grid">
+            <details class="category-list__item category-list__item--active">
+              <summary class="category-list__summary">
+                <div class="category-list__content">
+                  <img src="./images/truck-fast.svg" alt="">
+                  <p class="category-list__title">پیگیری ارسال سفارش</p>
+                </div>
+                <img src="./images/arrow-down (2).svg" alt="" class="category-list__arrow">
+              </summary>
+            </details>
+            <details class="category-list__item">
+              <summary class="category-list__summary">
+                <div class="category-list__content">
+                  <img src="./images/shopping-cart.svg" alt="">
+                  <p class="category-list__title">فرآیند ثبت سفارش</p>
+                </div>
+                <img src="./images/arrow-down (2).svg" alt="" class="category-list__arrow">
+              </summary>
+            </details>
+            <details class="category-list__item">
+              <summary class="category-list__summary">
+                <div class="category-list__content">
+                  <img src="./images/login.svg" alt="">
+                  <p class="category-list__title">ورود و ثبت نام</p>
+                </div>
+                <img src="./images/arrow-down (2).svg" alt="" class="category-list__arrow">
+              </summary>
+            </details>
+            <details class="category-list__item">
+              <summary class="category-list__summary">
+                <div class="category-list__content">
+                  <img src="./images/rotate-right.svg" alt="">
+                  <p class="category-list__title">مرجوع کالا</p>
+                </div>
+                <img src="./images/arrow-down (2).svg" alt="" class="category-list__arrow">
+              </summary>
+            </details>
+            <details class="category-list__item">
+              <summary class="category-list__summary">
+                <div class="category-list__content">
+                  <img src="./images/tag.svg" alt="">
+                  <p class="category-list__title">کد تخفیف</p>
+                </div>
+                <img src="./images/arrow-down (2).svg" alt="" class="category-list__arrow">
+              </summary>
+            </details>
+            <details class="category-list__item">
+              <summary class="category-list__summary">
+                <div class="category-list__content">
+                  <img src="./images/menu.svg" alt="">
+                  <p class="category-list__title">سایر موارد</p>
+                </div>
+                <img src="./images/arrow-down (2).svg" alt="" class="category-list__arrow">
+              </summary>
+            </details>
+          </div>
+          </div>
+          <div  class="faq__content">
+            <div class="faq-content__header">
+              <img src="./images/message.svg" alt="" class="faq-content__icon">
+              <h3 class="faq-content__title">سوالات پیگیری ارسال سفارش</h3>
+            </div>
+            <details class="faq__content--item">
+            <summary class="faq-content__question">
+              <p class="faq-content__question-text">چگونه می‌توانم وضعیت سفارش خود را پیگیری کنم؟</p>
+              <img src="./images/arrow-down (2).svg" alt="فلش">
+            </summary>
+            <span> لطفا با شماره0912345678تماس  بگیرید</span>
+            </details>
+            <details class="faq__content--item">
+            <summary class="faq-content__question">
+              <p class="faq-content__question-text">آیا پس از ثبت سفارش، به من اطلاع رسانی می‌شود؟</p>
+              <img src="./images/arrow-down (2).svg" alt="فلش">
+            </summary>
+            <span> لطفا با شماره0912345678تماس  بگیرید</span>
+            </details>
+            <details class="faq__content--item">
+            <summary class="faq-content__question">
+              <p class="faq-content__question-text"> مدت زمان ارسال سفارش چقدر است؟</p>
+              <img src="./images/arrow-down (2).svg" alt="فلش">
+            </summary>
+           </details>
+           <details class="faq__content--item">
+            <summary class="faq-content__question">
+              <p class="faq-content__question-text">چگونه می‌توانم شماره پیگیری سفارش را دریافت کنم؟</p>
+              <img src="./images/arrow-down (2).svg" alt="فلش">
+            </summary>
+           </details>
+           <details class="faq__content--item">
+            <summary class="faq-content__question">
+              <p class="faq-content__question-text">اگر وضعیت سفارش من به روز نشود، چه باید بکنم؟</p>
+              <img src="./images/arrow-down (2).svg" alt="فلش">
+            </summary>
+           </details>
+           <details class="faq__content--item">
+            <summary class="faq-content__question">
+              <p class="faq-content__question-text">آیا امکان تغییر آدرس ارسال پس از ثبت سفارش وجود دارد؟</p>
+              <img src="./images/arrow-down (2).svg" alt="فلش">
+            </summary>
+          </details>
+          <details class="faq__content--item">
+            <summary class="faq-content__question">
+              <p class="faq-content__question-text">اگر سفارش من به درستی دریافت نشود، چه کار کنم؟</p>
+              <img src="./images/arrow-down (2).svg" alt="فلش">
+            </summary>
+          </details>
+          <details class="faq__content--item">
+            <summary class="faq-content__question">
+              <p class="faq-content__question-text">آیا می‌توانم سفارش خود را قبل از ارسال لغو کنم؟</p>
+              <img src="./images/arrow-down (2).svg" alt="فلش">
+            </summary>
+          </details>
+          <details class="faq__content--item">
+            <summary class="faq-content__question">
+              <p class="faq-content__question-text">چگونه می‌توانم از تأخیر در ارسال سفارش خود مطلع شوم؟</p>
+              <img src="./images/arrow-down (2).svg" alt="فلش">
+            </summary>
+          </details>
+           <details class="faq__content--item">
+            <summary class="faq-content__question">
+              <p class="faq-content__question-text">آیا می‌توانم از طریق پیامک وضعیت سفارش خود را پیگیری کنم؟</p>
+              <img src="./images/arrow-down (2).svg" alt="فلش">
+            </summary>
+           </details>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer--container">
+
+      <!-- ستون های لینک -->
+      <div class="site-footer--top">
+        <div class="site-footer--column" >
+          <h6 class="site-footer--title">محبوب‌ترین‌ها</h6>
+          <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">لباس مردانه</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">کفش فوتبال</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">دوچرخه</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">لباس زنانه</a></li>
+          </ul>
+        </div>
+        <div class="site-footer--column">
+          <h6 class="site-footer--title">خدمات مشتریان</h6>
+          <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">سوالات متداول</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">حریم خصوصی</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">گزارش ایراد در سایت</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">شرایط بازگرداندن محصول</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer--column">
+          <h6 class="site-footer--title">راهنمای خرید</h6>
+            <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">راهنمای ثبت سفارش</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">شیوه های پرداخت</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">نحوه ارسال سفارش ها</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">نحوه پیگیری محصول</a></li>
+          </ul>
+        </div>
+        <div class="site-footer--column">
+          <h6 class="site-footer--title">اطلاعات تماس</h6>
+          <ul class="site-footer--list">
+            <li class="site-footer--item">نشانی تهران - تجریش - خیابان سالور</li>
+            <li class="site-footer--item site-footer--highlight">شماره تماس<span>3456789-021</span></li>
+            <li class="site-footer--item site-footer--highlight">پست الکترونیک<span>info@fitland.com</span></li>
+           <li class="site-footer--item">ساعت کاری شنبه تا چهارشنبه 9 تا 17</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- =====  بخش  هاید شده در دسکتاپ ===== -->
+      <div class="site-footer--top-hide-desktop">
+        <details class="site-footer--column" >
+          <summary class="site-footer--title">محبوب‌ترین‌ها
+            <img src="./images/arrow-circle-down.svg" alt="icon" class="hide-desktop--icon">
+          </summary>
+          <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">لباس مردانه</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">کفش فوتبال</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">دوچرخه</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">لباس زنانه</a></li>
+          </ul>
+        </details>
+        <details class="site-footer--column">
+          <summary class="site-footer--title">خدمات مشتریان
+            <img src="./images/arrow-circle-down.svg" alt="icon" class="hide-desktop--icon">
+          </summary>
+          <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">سوالات متداول</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">حریم خصوصی</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">گزارش ایراد در سایت</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">شرایط بازگرداندن محصول</a></li>
+          </ul>
+        </details>
+
+        <details class="site-footer--column">
+          <summary class="site-footer--title">راهنمای خرید
+            <img src="./images/arrow-circle-down.svg" alt="icon" class="hide-desktop--icon">
+          </summary>
+            <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">راهنمای ثبت سفارش</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">شیوه های پرداخت</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">نحوه ارسال سفارش ها</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">نحوه پیگیری محصول</a></li>
+          </ul>
+        </details>
+        <details class="site-footer--column">
+          <summary class="site-footer--title">اطلاعات تماس
+            <img src="./images/arrow-circle-down.svg" alt="icon" class="hide-desktop--icon">
+          </summary>
+          <ul class="site-footer--list">
+            <li class="site-footer--item">نشانی تهران - تجریش - خیابان سالور</li>
+            <li class="site-footer--item site-footer--highlight">شماره تماس<span>3456789-021</span></li>
+            <li class="site-footer--item site-footer--highlight">پست الکترونیک<span>info@fitland.com</span></li>
+           <li class="site-footer--item">ساعت کاری شنبه تا چهارشنبه 9 تا 17</li>
+          </ul>
+        </details>
+      </div>
+     
+      <!-- شبکه های اجتماعی -->
+      <div class="site-footer--side">
+        <div class="site-footer--social">
+          <p class="site-footer--text">برای دریافت تخفیف های بیشتر ما را دنبال کنید!</p>
+          <div class="site-footer--icons">
+            <a href="#" class="site-footer--icon"><img src="./images/Vector (2).svg" alt="social icon"></a>
+            <a href="#" class="site-footer--icon"><img src="./images/Group (2).svg" alt="social icon"></a>
+            <a href="#" class="site-footer--icon"><img src="./images/Vector (4).svg" alt="social icon"></a>
+            <a href="#" class="site-footer--icon"><img src="./images/Group.svg" alt="social icon"></a>       
+          </div>
+        </div>
+
+        <!-- فرم عضویت خبر نامه -->
+        <div class="site-footer--newsletter">
+          <p class="site-footer--newsletter-title">خبرنامه فیت‌لند</p>
+          <div class="site-footer--form">
+            <img src="./images/sms.svg" alt="پیام" class="site-footer--sms">
+            <input type="email" class="site-footer--input" placeholder="ایمیل خود را وارد کنید...">
+            <button class="site-footer--button">ثبت</button>
+          </div>
+        </div>
+      </div>
+
+     <!-- متن درباره فروشگاه  -->
+      <div class="site-footer--middle">
+        <h6 class="site-footer--title">فروشگاه اینترنتی فیت‌لند</h6>
+        <p class="site-footer--about-text" id="about-text">
+         فروشگاه لوازم ورزشی فیت‌لند در سال 1403 کار خود را به صورت حرفه ای آغاز کرد و با هدف ارائه جدیدترین محصولات ورزشی از قبیل لوازم فوتبال، فوتسال، والیبال، بسکتبال، تنیس و... همچنین پوشاک ورزشی و تجهیزات سفر، از برند های معتبر دنیا در محیطی کاربرپسند، قابل اطمینان و با مجربترین مشاوران و کارشناسان ورزشی فعالیت می کند. فروشگاه فیت‌لند دارای نماد اعتماد از وزارت صنعت معدن و تجارت می باشد و تمامی محصولات خود را با 7 روز ضمانت بازگشت همراه با گارانتی اصالت و سلامت فیزیکی، با سریع ترین روش های ارسال به سراسر ایران در اختیار مشتریان خود قرار می دهد.
+        </p>
+      </div>
+
+      <!-- بخش هاید شده در دسکتاپ -->
+      <div class="hide-desktop--footer--middle">
+        <h4 class="site-footer--title">فروشگاه اینترنتی فیت‌لند</h4>
+        <p class="site-footer--about-text">فروشگاه لوازم ورزشی فیت‌لند در سال 1403 کار خود را به صورت حرفه ای آغاز کرد و با هدف ارائه جدیدترین محصولات ورزشی از  </p>
+        <details class="site-footer--about-text">
+          <summary>مشاهده بیشتر...</summary>
+          <p > قبیل لوازم فوتبال، فوتسال، والیبال، بسکتبال، تنیس و... همچنین پوشاک ورزشی و تجهیزات سفر، از برند های معتبر دنیا در محیطی کاربرپسند، قابل اطمینان و با مجربترین مشاوران و کارشناسان ورزشی فعالیت می کند. فروشگاه فیت‌لند دارای نماد اعتماد از وزارت صنعت معدن و تجارت می باشد و تمامی محصولات خود را با 7 روز ضمانت بازگشت همراه با گارانتی اصالت و سلامت فیزیکی، با سریع ترین روش های ارسال به سراسر ایران در اختیار مشتریان خود قرار می دهد.
+          </p>
+        </details>
+      </div>
+
+      <!--نمادهای اعتماد-->
+      <div class="site-footer--symbols symbol">
+        <div class="site-footer--images">
+          <img src="./images/01.svg" alt="نماد اعتماد" class="site-footer--image">
+          <img src="./images/02.svg" alt="نماد اعتماد" class="site-footer--image">
+          <img src="./images/03 1.svg" alt="نماد اعتماد" class="site-footer--image">
+        </div>
+        <p class="site-footer--guarantee">یک هفته ضمانت بازگشت ✍
+        </p>
+      </div>
+    </div>
+
+    <!--خط جداکننده-->
+    <span class="site-footer--divider"></span>
+
+    <!--کپی رایت-->
+    <div class="site-footer--bottom">
+      <p class="site-footer--copyright"><img src="./images/security-safe.svg" alt="ایکون">
+      تمامی حقوق مادی و معنوی این وب‌سایت برای مجموعه فیت‌لند محفوظ می‌باشد.</p>
+      <p class="site-footer--designer"><img src="./images/buildings.svg" alt="ایکون">
+     طراحی شده توسط گروه 8 دوره طراحی رابط کاربری احسان عزتی</p>
+    </div>
+  </footer> 
+    
+</body>
+</html>

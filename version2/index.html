@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>فروشگاه لوازم ورزشی فیت لند</title>
+</head>
+<body>
+    <!-- ===== هدر اصلی سایت ===== -->
+  <header class="site-header">
+
+    <!-- نوار بالای هدر -->
+    <div class="site-header--top">
+
+      <!--لوگو و بنر تبلیغاتی-->
+      <div class="site-header--logo">
+        <img src="./images/frame 1.svg" alt="لوگوی سایت">
+      </div>
+
+      <!-- باکس جستجو -->
+      <div class="site-header--search">
+        <label class="search-box">
+
+          <!--آیکون جستجو-->
+          <img src="./images/search-normal.svg" alt="" class="search-box--icon-left">
+          <input type="search" name="search" id="search" class="search-box--input" aria-label="جستجو" placeholder="جستجو">
+        </label>
+      </div>
+
+      <!--بخش حساب کاربری و سبد خرید -->
+      <div class="site-header--cart">
+
+        <!-- منوی کاربری-->
+        <details class="user-menu">
+          <summary class="user-menu--toggle">
+            <img src="./images/user.svg" alt="کاربر">
+            <img src="./images/arrow-down.svg" alt="فلش" class="user-menu--arrow">
+          </summary>
+        </details>
+
+        <!-- لینک سبد خرید -->
+        <div class="cart">
+          <a href="#" class="cart-link">
+            <img src="./images/bag-2.svg" alt="" class="cart--icon-default">
+            <span class="cart--count">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- منوی اصلی ناوبری -->
+    <nav class="main-nav">
+
+      <!-- دسته بندی محصولات -->
+      <ul class="main-nav--list">
+        <li class="main-nav--item"><a href="#">مردانه</a></li>
+        <li class="main-nav--item"><a href="#">زنانه</a></li>
+        <li class="main-nav--item"><a href="#">بچگانه</a></li>
+        <li class="main-nav--item"><a href="#">لوازم ورزشی</a></li>
+        <li class="main-nav--item"><a href="#">شیکر و جاگ</a></li> 
+      </ul>
+
+      <!-- لینک ویژه فروشگاه -->
+      <div class="main-nav--featured">
+        <a href="#" class="featured-link">
+          <img src="./images/star.svg" alt="">
+          <span>جدیدترین محصولات</span>
+        </a>
+        <a href="#" class="featured-link">
+          <img src="./images/flash.svg" alt="">
+          <span>تخفیفات ویژه</span>
+        </a>
+        <a href="#" class="featured-link">
+          <img src="./images/award.svg" alt="">
+          <span>پرفروش ترین ها</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main class="site-main">
+    <div class="main-content">
+
+      <!-- layout اصلی صفحه دسته بندی -->
+      <div class="catalog-layout">
+
+       <!-- مسیر سایت -->
+        <nav class="main-breadcrumb" aria-label="مسیر سایت">
+          <ul class="breadcrumb-list">
+            <li class="breadcrumb-item">زنانه</li>
+            <li class="breadcrumb-separator"><img src="./images/arrow-left.svg" alt="فلش راست به مسیر قبل">
+            </li>
+            <li class="breadcrumb-item">لباس زنانه</li>
+            <li class="breadcrumb-separator"><img src="./images/arrow-left.svg" alt="فلش راست به مسیر قبل">
+            </li>
+            <li class="breadcrumb-item breadcrumb-item--active">تیشرت زنانه</li>
+          </ul>
+        </nav>
+
+        <!-- ساید بار فیلتر محصولات -->
+        <aside class="filters">
+
+          <!-- عنوان و کنترل های اصلی فیلتر -->
+          <header class="filters-header">
+            <h3 class="filters-title">فیلتر ها</h3>
+            <button class="filters-clear">حذف فیلترها</button>
+          </header>
+
+          <!-- سوییچ های سریع فیلتر -->
+          <div class="filters-toggle">
+            <div class="filters-toggle-item">
+              <span>محصولات موجود</span>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="filters-toggle-item">
+              <span>محصولات تخفیف دار</span>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+          <!-- فیلتر های باز شو -->
+          <details class="filters--item">
+            <summary class="filters--summary">
+              <span class="filters--title">قیمت</span>
+              <img src="./images/arrow-down (2).svg" alt="arrow" class="filters--icon">
+            </summary>
+            <div class="filters--values">
+              <label for="text" class="filters--value">بیشترین
+                <input type="text" name="text" id="text" placeholder="وارد کنید">
+              </label>
+              <label for="text" class="filters--value filters--value-smidgen">کمترین  
+                <input type="text" name="text" id="text" placeholder="وارد کنید">
+              </label>
+              <img src="./images/Frame 1430103489.svg" alt="مقدار  کم و زیاد">
+            </div>
+          </details>
+          <details class="filters--item">
+            <summary class="filters--summary">
+              <span class="filters--title">رنگ</span>
+              <img src="./images/arrow-down (2).svg" alt="arrow" class="filters--icon">
+            </summary>
+            <div class="filters--circle">
+              <span class="color-filters  theme-deeppink"></span>
+              <span class="color-filters theme-orangered"></span>
+              <span class="color-filters theme-cornflowerblue"></span>
+              <span class="color-filters theme-red"></span>
+              <span class="color-filters theme-yellow"></span>
+              <span class="color-filters theme-lawngreen"></span>
+              <span class="color-filters theme-black"></span>
+            </div>
+          </details>
+          <details class="filters--item">
+            <summary class="filters--summary">
+              <span class="filters--title">سایز</span>
+              <img src="./images/arrow-down (2).svg" alt="arrow" class="filters--icon">
+            </summary>
+            <div class="filters--size">
+              <span><a href="#" class="size--item">L</a></span>
+              <span><a href="#" class="size--item">M</a></span>
+              <span><a href="#" class="size--item">S</a></span>
+              <span><a href="#" class="size--item">XXL</a></span>
+              <span><a href="#" class="size--item">XL</a></span>
+            </div>
+          </details>
+          <details class="filters--item">
+            <summary class="filters--summary">
+              <span class="filters--title">برند</span>
+              <img src="./images/arrow-down (2).svg" alt="arrow" class="filters--icon">
+            </summary>
+            <div class="filters--brands">
+              <label for="search" class="filters--search">
+                <img src="./images/search-normal (2).svg" alt="ایکون جستجو">
+                <input type="search" name="search" id="search" placeholder="جستجو">
+              </label>
+              <div class="filters--size">
+                <span><a href="#" class="size--item">The North Face</a></span>
+                <span><a href="#" class="size--item">Under Armour</a></span>
+                <span><a href="#" class="size--item">nike</a></span>
+                <span><a href="#" class="size--item">nike</a></span>
+                <span><a href="#" class="size--item">Fila</a></span>
+                <span><a href="#" class="size--item">adidas</a></span>
+                <span><a href="#" class="size--item">Fila</a></span>
+                <span><a href="#" class="size--item">adidas</a></span>
+                <span><a href="#" class="size--item">Under Armour</a></span>
+              </div>
+            </div>
+          </details>
+        </aside>
+      </div>
+      <!-- ناحیه نمایش محصولات -->
+      <div class="product-area">
+
+       <!-- منوی مرتب سازی-->
+        <section class="sorting-menu">
+          <ul class="sorting-list">
+            <li><a href="#" class="sorting-item--active">پربازدیدترین</a></li>
+            <li><a href="#" class="sorting-item">جدیدترین</a></li>
+            <li><a href="#" class="sorting-item">پرفروش ترین</a></li>
+            <li><a href="#" class="sorting-item">گران ترین</a></li>
+            <li><a href="#" class="sorting-item">ارزان ترین</a></li>
+          </ul>
+        </section>
+
+        <!-- تعداد کل محصولات -->
+        <p class="product-count">2,521 کالا</p>
+
+        <!-- گرید محصولات -->
+        <section class="products-container">
+
+         <!-- کارت نمایش محصول -->
+          <article class="product-card">
+
+            <!-- تصاویر محصول -->
+            <div class="product-images">
+              <img src="./images/Rectangle 1167 (2).svg" alt="تیشرت زنانه کد 1737" class="main-image">
+              <img src="./images/Frame 1430103585.svg" alt="آیکون رتبه" class="icon">
+            </div>
+
+            <!-- اطلاعات محصول -->
+            <div class="product-info">
+              <div class="product-box">
+                <h3 class="product-name">تیشرت زنانه کد 1737</h3>
+                <div class="product-stars">
+                  <img src="./images/stars.svg" alt="رتبه 3 از 5 ستاره" class="stars">
+                </div>
+              </div>
+              <div class="product-sizes">از سایز M تا 3XL</div>
+              <div class="product-prices">
+                <span class="product-price"> 200,000 تومان</span>
+                <span class="product-price-old">320,000 تومان</span>
+              </div>
+              <div class="color-options">
+                <span class="color-circle color1 theme-blue"></span>
+                <span class="color-circle color2 theme-green"></span>
+                <span class="color-circle color3 theme-red"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- کارت  محصول2-->
+          <article class="product-card">
+            <div class="product-images">
+              <img src="./images/Rectangle 1167 (4).svg" alt="تیشرت زنانه کد 1727" class="main-image">
+            </div>
+            <div class="product-info">
+              <div class="product-box">
+                <h3 class="product-name">تیشرت زنانه کد 1727</h3>
+                <div class="product-stars">
+                  <img src="./images/stars (1).svg" alt=" رتبه 2 از 5 ستاره" class="star">
+                </div>
+              </div>
+              <div class="product-sizes">از سایز M تا 3XL</div>
+              <div class="product-prices">
+                <span class="product-price"> 190,000 تومان</span>
+              </div>
+              <div class="color-options">
+                <span class="color-circle color1 theme-slategrey"></span>
+                <span class="color-circle color2 theme-seagreen"></span>
+                <span class="color-circle color3 theme-pink"></span>
+              </div>
+            </div>
+          </article>
+          
+          <!-- کارت  محصول3-->
+          <article class="product-card">
+            <div class="product-images">
+              <img src="./images/image.svg" alt="تیشرت زنانه کد 1717" class="main-image">
+              <img src="./images/Frame 1430103585.svg" alt="آیکون رتبه" class="icon">
+            </div>
+            <div class="product-info">
+              <div class="product-box">
+                <h3 class="product-name">تیشرت زنانه کد 1717</h3>
+                <div class="product-stars">
+                  <img src="./images/stars (2).svg" alt="رتبه 4 از 5 ستاره " class="stars">
+                </div>
+              </div>
+              <div class="product-sizes">از سایز M تا 3XL</div>
+              <div class="product-prices">
+                <span class="product-price"> 200,000 تومان</span>
+                <span class="product-price-old">240,000 تومان</span>
+              </div>
+              <div class="color-options">
+                <span class="color-circle color1 theme-black" ></span>
+                <span class="color-circle color2 theme-crimson"></span>
+                <span class="color-circle color3 theme-black"></span>
+              </div>
+            </div>
+          </article>
+          
+          <!-- کارت  محصول4-->
+          <article class="product-card">
+            <div class="product-images">
+              <img src="./images/Rectangle 1167 (5).svg" alt="تیشرت زنانه کد 1757" class="main-image">
+              <img src="./images/Frame 1430103585.svg" alt="آیکون رتبه" class="icon">
+            </div>
+            <div class="product-info">
+              <div class="product-box">
+                <h3 class="product-name">تیشرت زنانه کد 1757</h3>
+                <div class="product-stars">
+                  <img src="./images/stars (1).svg" alt="رتبه 2 از 5 ستاره" class="star">
+                </div>
+              </div>
+              <div class="product-sizes">از سایز M تا 3XL</div>
+              <div class="product-prices">
+                <span class="product-price"> 260,000 تومان</span>
+                <span class="product-price-old"> 300,000 تومان</span>
+              </div>
+              <div class="color-options">
+                <span class="color-circle color1 theme-darkred"></span>
+                <span class="color-circle color2 theme-seagreen"></span>
+                <span class="color-circle color3 theme-pink"></span>
+              </div>
+            </div>
+          </article>
+          
+          <!-- کارت  محصول5-->
+          <article class="product-card">
+            <div class="product-images">
+              <img src="./images/Rectangle 1167 (6).svg" alt="تیشرت زنانه کد 1767" class="main-image">
+            </div>
+            <div class="product-info">
+              <div class="product-box">
+                <h3 class="product-name">تیشرت زنانه کد 1767</h3>
+                <div class="product-stars">
+                  <img src="./images/stars (2).svg" alt=" رتبه 4 از 5 ستاره" class="star">
+                </div>
+              </div>
+              <div class="product-sizes">از سایز M تا 3XL</div>
+              <div class="product-prices">
+                <span class="product-price"> 190,000 تومان</span>
+              </div>
+              <div class="color-options">
+                <span class="color-circle color1 theme-white"></span>
+                <span class="color-circle color2 theme-seagreen"></span>
+                <span class="color-circle color3 theme-pink"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- کارت  محصول6-->
+          <article class="product-card">
+            <div class="product-images">
+              <img src="./images/Rectangle 1167 (7).svg" alt="تیشرت زنانه کد 1757" class="main-image">
+              <img src="./images/Frame 1430103585.svg" alt="آیکون رتبه" class="icon">
+            </div>
+            <div class="product-info">
+              <div class="product-box">
+                <h3 class="product-name">تیشرت زنانه کد 1757</h3>
+                <div class="product-stars">
+                  <img src="./images/stars (1).svg" alt="رتبه 2 از 5 ستاره" class="star">
+                </div>
+              </div>
+              <div class="product-sizes">از سایز M تا 3XL</div>
+              <div class="product-prices">
+                <span class="product-price"> 260,000 تومان</span>
+                <span class="product-price-old">300,000 تومان</span>
+              </div>
+              <div class="color-options">
+                <span class="color-circle color1 theme-olive"></span>
+                <span class="color-circle color2 theme-seagreen"></span>
+                <span class="color-circle color3 theme-pink"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- کارت  محصول7-->
+          <article class="product-card">
+            <div class="product-images">
+              <img src="./images/image (1).svg" alt="تیشرت زنانه کد 1797" class="main-image">
+              <img src="./images/Frame 1430103585.svg" alt="آیکون رتبه" class="icon">
+            </div>
+            <div class="product-info">
+              <div class="product-box">
+                <h3 class="product-name">تیشرت زنانه کد 1797</h3>
+                <div class="product-stars">
+                  <img src="./images/stars.svg" alt="رتبه 3 از 5 ستاره" class="star">
+                </div>
+              </div>
+              <div class="product-sizes">از سایز M تا 3XL</div>
+              <div class="product-prices">
+                <span class="product-price"> 320,000 تومان</span>
+                <span class="product-price-old"> 400,000 تومان</span>
+              </div>
+              <div class="color-options">
+                <span class="color-circle color1 theme-lightpink"></span>
+                <span class="color-circle color2 theme-green"></span>
+                <span class="color-circle color3 theme-midnightblue"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- کارت  محصول8-->
+          <article class="product-card">
+            <div class="product-images">
+              <img src="./images/Rectangle 1167 (8).svg" alt="تیشرت زنانه کد 1778" class="main-image">
+              <img src="./images/Frame 1430103585.svg" alt="آیکون رتبه" class="icon">
+            </div>
+            <div class="product-info">
+              <div class="product-box">
+                <h3 class="product-name">تیشرت زنانه کد 1778</h3>
+                <div class="product-stars">
+                  <img src="./images/stars (1).svg" alt="رتبه 2 از 5 ستاره" class="star">
+                </div>
+              </div>
+              <div class="product-sizes">از سایز M تا 3XL</div>
+              <div class="product-prices">
+                <span class="product-price"> 160,000 تومان</span>
+                <span class="product-price-old">200,000 تومان</span>
+              </div>
+              <div class="color-options">
+                <span class="color-circle color1 theme-black"></span>
+                <span class="color-circle color2 theme-aqua"></span>
+                <span class="color-circle color3 theme-tomato"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- کارت  محصول9-->
+          <article class="product-card">
+            <div class="product-images">
+              <img src="./images/Rectangle 1167 (9).svg" alt="تیشرت زنانه کد 1777" class="main-image">
+            </div>
+            <div class="product-info">
+              <div class="product-box">
+                <h3 class="product-name">تیشرت زنانه کد 1777</h3>
+                <div class="product-stars">
+                  <img src="./images/stars (2).svg" alt="رتبه 4 از 5 ستاره" class="star">
+                </div>
+              </div>
+              <div class="product-sizes">از سایز M تا 3XL</div>
+              <div class="product-prices">
+                <span class="product-price"> 150,000 تومان</span>
+              </div>
+              <div class="color-options">
+                <span class="color-circle color1 theme-purple"></span>
+                <span class="color-circle color2 theme-green"></span>
+                <span class="color-circle color3 theme-darkslategray"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- کارت  محصول10-->
+          <article class="product-card">
+            <div class="product-images">
+              <img src="./images/Rectangle 1167 (10).svg" alt="تیشرت زنانه کد 1827" class="main-image">
+              <img src="./images/Frame 1430103597.svg" alt="تصویر سایز ها" class="image-size">
+              <img src="./images/Frame 1430103585.svg" alt="آیکون رتبه" class="icon">
+            </div>
+            <div class="product-info product-info--large-gap">
+              <div class="product-gallery">
+                <img src="./images/Rectangle 1168.svg" alt="تیشرت زنانه سفید">
+                <img src="./images/Rectangle 1170.svg" alt="تیشرت زنانه مشکی">
+                <img src="./images/Frame 1430103532.svg" alt="ست ورزشی زنانه">
+              </div>
+              <div class="product-box">
+                <h3 class="product-name">تیشرت زنانه کد 1827</h3>
+              </div>
+              <div class="product-sizes">از سایز M تا 3XL</div>
+              <div class="product-prices">
+                <span class="product-price"> 160,000 تومان</span>
+                <span class="product-price-old">200,000 تومان</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- کارت  محصول11-->
+          <article class="product-card">
+            <div class="product-images">
+              <img src="./images/Rectangle 1167 (11).svg" alt="تیشرت زنانه کد 1817" class="main-image">
+            </div>
+            <div class="product-info">
+              <div class="product-box">
+                <h3 class="product-name">تیشرت زنانه کد 1817</h3>
+                <div class="product-stars">
+                  <img src="./images/stars (2).svg" alt="رتبه 4 از 5 ستاره" class="star">
+                </div>
+              </div>
+              <div class="product-sizes">از سایز M تا 3XL</div>
+              <div class="product-prices">
+                <span class="product-price"> 210,000 تومان</span>
+              </div>
+              <div class="color-options">
+                <span class="color-circle color1 theme-cadetblue"></span>
+                <span class="color-circle color2 theme-green"></span>
+                <span class="color-circle color3 theme-plum"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- کارت  محصول12-->
+          <article class="product-card">
+            <div class="product-images">
+              <img src="./images/Rectangle 1167 (12).svg" alt="تیشرت زنانه کد 1807" class="main-image">
+            </div>
+            <div class="product-info">
+              <div class="product-box">
+                <h3 class="product-name">تیشرت زنانه کد 1807</h3>
+                <div class="product-stars">
+                 <img src="./images/stars.svg" alt="رتبه 3 از 5 ستاره" class="star">
+                </div>
+              </div>
+              <div class="product-sizes">از سایز M تا 3XL</div>
+              <div class="product-prices">
+                <span class="product-price"> 260,000 تومان</span>
+                <span class="product-price-old"> 300,000 تومان</span>
+              </div>
+              <div class="color-options">
+                <span class="color-circle color1 theme-dimgray"></span>
+                <span class="color-circle color2 theme-chocolate"></span>
+                <span class="color-circle color3 theme-darkslategray"></span>
+              </div>
+            </div>
+          </article>
+        </section>
+        <!-- صفحه بندی محصولات -->
+        <nav class="pagination" aria-label="صفحه بندی محصولات">
+          <button class="pagination-arrow pagination-arrow-right" aria-label="صفحه قبل">
+            <img src="./images/arrow-right.svg" alt="فلش چپ">
+          </button>
+          <ul class="pagination-numbers">
+            <li class="page-number">1</li>
+            <li class="page-number">2</li>
+            <li class="page-number">3</li>
+            <li class="page-number page-number--active">4</li>
+            <li class="page-number">5</li>
+            <li class="page-number">6</li>
+            <li class="page-number">7</li>
+            <li class="page-number ellipsis">…</li>
+          </ul>
+          <button class="pagination-arrow pagination-arrow-left" aria-label="صفحه بعد">
+            <img src="./images/arrow-left (2).svg" alt="فلش راست">
+          </button>
+        </nav>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer--container">
+
+      <!-- ستون های لینک -->
+      <div class="site-footer--top">
+        <div class="site-footer--column" >
+          <h6 class="site-footer--title">محبوب‌ترین‌ها</h6>
+          <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">لباس مردانه</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">کفش فوتبال</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">دوچرخه</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">لباس زنانه</a></li>
+          </ul>
+        </div>
+        <div class="site-footer--column">
+          <h6 class="site-footer--title">خدمات مشتریان</h6>
+          <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">سوالات متداول</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">حریم خصوصی</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">گزارش ایراد در سایت</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">شرایط بازگرداندن محصول</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer--column">
+          <h6 class="site-footer--title">راهنمای خرید</h6>
+            <ul class="site-footer--list">
+            <li class="site-footer--item"><a class="site-footer--link" href="#">راهنمای ثبت سفارش</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">شیوه های پرداخت</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">نحوه ارسال سفارش ها</a></li>
+            <li class="site-footer--item"><a class="site-footer--link" href="#">نحوه پیگیری محصول</a></li>
+          </ul>
+        </div>
+        <div class="site-footer--column">
+          <h6 class="site-footer--title">اطلاعات تماس</h6>
+          <ul class="site-footer--list">
+            <li class="site-footer--item">نشانی تهران - تجریش - خیابان سالور</li>
+            <li class="site-footer--item site-footer--highlight">شماره تماس<span>3456789-021</span></li>
+            <li class="site-footer--item site-footer--highlight">پست الکترونیک<span>info@fitland.com</span></li>
+           <li class="site-footer--item">ساعت کاری شنبه تا چهارشنبه 9 تا 17</li>
+          </ul>
+        </div>
+      </div>
+     
+      <!-- شبکه های اجتماعی -->
+      <div class="site-footer--side">
+        <div class="site-footer--social">
+          <p class="site-footer--text">برای دریافت تخفیف های بیشتر ما را دنبال کنید!</p>
+          <div class="site-footer--icons">
+            <a href="#" class="site-footer--icon"><img src="./images/Vector (2).svg" alt="social icon"></a>
+            <a href="#" class="site-footer--icon"><img src="./images/Group (2).svg" alt="social icon"></a>
+            <a href="#" class="site-footer--icon"><img src="./images/Vector (4).svg" alt="social icon"></a>
+            <a href="#" class="site-footer--icon"><img src="./images/Group.svg" alt="social icon"></a>       
+          </div>
+        </div>
+
+        <!-- فرم عضویت خبر نامه -->
+        <div class="site-footer--newsletter">
+          <p class="site-footer--newsletter-title">خبرنامه فیت‌لند</p>
+          <div class="site-footer--form">
+            <img src="./images/sms.svg" alt="پیام" class="site-footer--sms">
+            <input type="email" class="site-footer--input" placeholder="ایمیل خود را وارد کنید...">
+            <button class="site-footer--button">ثبت</button>
+          </div>
+        </div>
+      </div>
+
+     <!-- متن درباره فروشگاه  -->
+      <div class="site-footer--middle">
+        <h6 class="site-footer--title">فروشگاه اینترنتی فیت‌لند</h6>
+        <p class="site-footer--about-text" id="about-text">
+         فروشگاه لوازم ورزشی فیت‌لند در سال 1403 کار خود را به صورت حرفه ای آغاز کرد و با هدف ارائه جدیدترین محصولات ورزشی از قبیل لوازم فوتبال، فوتسال، والیبال، بسکتبال، تنیس و... همچنین پوشاک ورزشی و تجهیزات سفر، از برند های معتبر دنیا در محیطی کاربرپسند، قابل اطمینان و با مجربترین مشاوران و کارشناسان ورزشی فعالیت می کند. فروشگاه فیت‌لند دارای نماد اعتماد از وزارت صنعت معدن و تجارت می باشد و تمامی محصولات خود را با 7 روز ضمانت بازگشت همراه با گارانتی اصالت و سلامت فیزیکی، با سریع ترین روش های ارسال به سراسر ایران در اختیار مشتریان خود قرار می دهد.
+        </p>
+      </div>
+
+      <!--نمادهای اعتماد-->
+      <div class="site-footer--symbols symbol">
+        <div class="site-footer--images">
+          <img src="./images/01.svg" alt="نماد اعتماد" class="site-footer--image">
+          <img src="./images/02.svg" alt="نماد اعتماد" class="site-footer--image">
+          <img src="./images/03 1.svg" alt="نماد اعتماد" class="site-footer--image">
+        </div>
+        <p class="site-footer--guarantee">یک هفته ضمانت بازگشت ✍
+        </p>
+      </div>
+    </div>
+
+    <!--خط جداکننده-->
+    <span class="site-footer--divider"></span>
+
+    <!--کپی رایت-->
+    <div class="site-footer--bottom">
+      <p class="site-footer--copyright"><img src="./images/security-safe.svg" alt="ایکون">
+      تمامی حقوق مادی و معنوی این وب‌سایت برای مجموعه فیت‌لند محفوظ می‌باشد.</p>
+      <p class="site-footer--designer"><img src="./images/buildings.svg" alt="ایکون">
+     طراحی شده توسط گروه 8 دوره طراحی رابط کاربری احسان عزتی</p>
+    </div>
+  </footer>  
+</body>
+</html>
